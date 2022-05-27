@@ -16,7 +16,7 @@ import Data.Either (rights)
 import Data.List ((\\))
 import Data.Text (Text)
 import Data.Text.Lazy (toStrict, fromStrict)
-import GHC.Natural (intToNatural)
+import GHC.Natural (naturalFromInteger)
 import Numeric.Natural (Natural)
 import Text.Microstache (compileMustacheText, renderMustacheW, MustacheWarning)
 import Text.Parsec (ParseError)
@@ -94,8 +94,8 @@ instance Store GithubClient where
         cfg            = config s
         mvar           = internalState s
         template       = githubTemplate cfg
-        unreadCount    = intToNatural . length
-        firstTimeCount = intToNatural . length . filter isNew
+        unreadCount    = naturalFromInteger . fromIntegral . length
+        firstTimeCount = naturalFromInteger . fromIntegral . length . filter isNew
         shouldNotify maybeOldState newState = case maybeOldState of
             Just oldState -> notificationIds newState \\ notificationIds oldState
             Nothing       -> notificationIds newState
