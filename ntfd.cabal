@@ -1,13 +1,13 @@
 cabal-version: 1.12
 
--- This file has been generated from package.yaml by hpack version 0.33.0.
+-- This file has been generated from package.yaml by hpack version 0.36.0.
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 1791f4900b353472b60f8341699d027b2c0265ec1056c5841c62ab71ade9bcc7
+-- hash: d78900261f0784b00ad04fe973cedf3d329043b49741fb70f9683c0bff52e8bb
 
 name:           ntfd
-version:        0.2.2
+version:        0.2.3
 description:    Please see the README on GitHub at <https://github.com/kamek-pf/ntfd#readme>
 homepage:       https://github.com/kamek-pf/ntfd#readme
 bug-reports:    https://github.com/kamek-pf/ntfd/issues
@@ -44,7 +44,12 @@ library
       Paths_ntfd
   hs-source-dirs:
       src
-  default-extensions: OverloadedStrings RecordWildCards NamedFieldPuns ScopedTypeVariables TupleSections
+  default-extensions:
+      OverloadedStrings
+      RecordWildCards
+      NamedFieldPuns
+      ScopedTypeVariables
+      TupleSections
   ghc-options: -Wall -Wincomplete-uni-patterns -Wincomplete-record-updates -Wcompat -Widentities -Wredundant-constraints -Wmissing-export-lists -Wpartial-fields
   build-depends:
       aeson
@@ -75,7 +80,12 @@ executable ntfd
       Paths_ntfd
   hs-source-dirs:
       app
-  default-extensions: OverloadedStrings RecordWildCards NamedFieldPuns ScopedTypeVariables TupleSections
+  default-extensions:
+      OverloadedStrings
+      RecordWildCards
+      NamedFieldPuns
+      ScopedTypeVariables
+      TupleSections
   ghc-options: -Wall -Wincomplete-uni-patterns -Wincomplete-record-updates -Wcompat -Widentities -Wredundant-constraints -Wmissing-export-lists -Wpartial-fields -threaded
   build-depends:
       aeson
@@ -111,7 +121,12 @@ test-suite ntfd-test
       Paths_ntfd
   hs-source-dirs:
       test
-  default-extensions: OverloadedStrings RecordWildCards NamedFieldPuns ScopedTypeVariables TupleSections
+  default-extensions:
+      OverloadedStrings
+      RecordWildCards
+      NamedFieldPuns
+      ScopedTypeVariables
+      TupleSections
   ghc-options: -Wall -Wincomplete-uni-patterns -Wincomplete-record-updates -Wcompat -Widentities -Wredundant-constraints -Wmissing-export-lists -Wpartial-fields -Wno-incomplete-uni-patterns -Wno-missing-export-lists -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       aeson

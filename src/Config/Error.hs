@@ -3,12 +3,12 @@ module Config.Error
     ) where
 
 import Control.Exception (IOException)
-import Toml (DecodeException)
+import Toml (TomlDecodeError)
 
 data ConfigError
     = IOError IOException
     | Disabled
     | InvalidPath
     | MissingApiKey
-    | ParseError DecodeException
+    | ParseError [TomlDecodeError]
     deriving (Show, Eq)
